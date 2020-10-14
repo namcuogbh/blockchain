@@ -4,6 +4,7 @@ import logo from '../logo.png';
 import './App.css';
 import Marketplace from '../abis/Marketplace.json'
 import Navbar from './Navbar'
+import Main from './Main'
 
 class App extends Component {
 
@@ -54,8 +55,17 @@ class App extends Component {
       products: [],
       loading: true
     }
+    this.createProduct = this.createProduct.bind(this)
   }
 
+
+  createProduct(name, price){
+      this.setState({ loading: true })
+      this.state.marketplace.methods.createProduct(name, price).send({ from: this.state.account })
+      .once('receipt',(receipt) => {
+        this.setState({ loading: false })
+      })
+  }
 
 
 
@@ -66,10 +76,10 @@ class App extends Component {
         <div className="container-fluid mt-5">
           <div className="row">
             <main role="main" className="col-lg-12 d-flex text-center">
-                <div id="content">
-                    <h1>Add products</h1>
-
-                </div>
+                { this.state.loading
+                  ? <div id="loader" className="text-center"><p className="text-center">Loading...</p></div>
+                  : <Main createProduct={this.createProduct} />
+                }
             </main>
           </div>
         </div>
