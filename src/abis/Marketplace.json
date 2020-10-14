@@ -5417,12 +5417,18 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x192Ca079E860966B078066D01A25309258e0d1Cf",
-      "transactionHash": "0x0eaeca35b3c02586e421d986d62cfdb910ca94a1e3f83d4e2aee66c65deb30cc"
-    }
+      "address": "0xC1a639CAea66b629Fb3f145F175C915dA219c7a9",
+      "transactionHash": "0x328c8c62fc5ba8b6ded3456bc111f34cfbb50083b425d7082a021c87210c9830"
+    },
+     "42": {
+      "events": {},
+      "links": {},
+      "address": "0x14cec71b153bfeb10a754e73c97cb313f43618f0",
+      "transactionHash": "0x2c4358e42e5eb57d65b975a68055d689e23c64121051e64e645cffbc677b887a"
+    }  
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2020-10-14T14:54:18.847Z",
+  "updatedAt": "2020-10-14T16:04:21.708Z",
   "devdoc": {
     "methods": {}
   },
