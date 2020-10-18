@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Web3 from 'web3';
 import logo from '../logo.png';
 import './App.css';
+import './fontawesome.min.css';
 import Marketplace from '../abis/Marketplace.json'
 import Navbar from './Navbar'
 import Main from './Main'
@@ -93,7 +94,7 @@ class App extends Component {
           <Navbar account={this.state.account} />
         <div className="container-fluid mt-5">
           <div className="row">
-            <main role="main" className="col-lg-12 d-flex text-center">
+            <main role="main" className="col-lg-12 d-flex text-center main-css">
                 { this.state.loading
                   ? <div id="loader" className="text-center"><p className="text-center">Loading...</p></div>
                   : <Main
